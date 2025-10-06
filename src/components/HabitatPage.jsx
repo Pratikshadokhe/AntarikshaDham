@@ -45,7 +45,6 @@ const generateSpaceTelemetry = () => {
   return data;
 };
 
-// Placeholder SpaceView component (replace with 3D globe / Cesium / Deck.gl later)
 const SpaceView = ({ telemetry, region, view3D, onModuleClick, darkMode }) => {
   return (
     <div className={`flex-1 p-6 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'} rounded-lg`}>
@@ -232,8 +231,7 @@ const HabitatPage = () => {
         
     </div>
   );
-
-  // small presentational components
+  
   const StarIcon = ({ darkMode }) => <div style={{ width: 6, height: 6 }} className={`${darkMode ? 'bg-white' : 'bg-yellow-400'} rounded-full`} />;
 
   const Feature = ({ title, icon, desc }) => (

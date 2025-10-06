@@ -5,6 +5,7 @@ import HabitatDesigner from './components/HabitatDesigner'
 import Astronomy from './subpages/Astronomy'
 import LifeInSpace from './subpages/LifeInSpace'
 import SpaceTechnology from './subpages/SpaceTechnology'
+import SpaceQuizChallenges from './subpages/quizzes'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/astronomy' element={<Astronomy/>} />
         <Route path='/lifeInSpace' element={<LifeInSpace/>} />
         <Route path='/spaceTechnology' element={<SpaceTechnology/>} />
+        <Route path='/quizzes' element={<SpaceQuizChallenges/>} />
       </Routes>
     </Router>
   )

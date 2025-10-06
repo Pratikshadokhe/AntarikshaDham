@@ -30,19 +30,17 @@ export default function Header({ scrollToRef, refs, activeSection }) {
 
   const handleClick = (id, ref) => {
     scrollToRef(id, ref);
-    setMobileOpen(false); // Close mobile menu on click
+    setMobileOpen(false); 
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-50 backdrop-blur p-4 flex items-center justify-between">
-      {/* Logo */}
       <div className="flex items-center gap-4">
-        <div className="w-52 h-12 bg-gradient-to-br from-[#00FFD0] to-[#FFAA00] rounded-full flex items-center justify-center font-bold text-2xl text-black">
+        <div className="w-52 h-12 bg-gradient-to-br from-[#00FFD0] to-[#FFAA00] rounded-full flex items-center justify-center font-bold text-2xl text-black ml-20">
           AntarikshDham
         </div>
       </div>
 
-      {/* Desktop Menu */}
       <nav className="hidden md:flex gap-4 items-center">
         {menuItems.map((item) => (
           <button
@@ -59,7 +57,6 @@ export default function Header({ scrollToRef, refs, activeSection }) {
         ))}
       </nav>
 
-      {/* Mobile Menu Toggle */}
       <div className="md:hidden">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -69,7 +66,6 @@ export default function Header({ scrollToRef, refs, activeSection }) {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="absolute top-full left-0 w-full bg-black bg-opacity-90 backdrop-blur-md flex flex-col items-center py-4 gap-2 md:hidden">
           {menuItems.map((item) => (
